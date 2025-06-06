@@ -1,0 +1,8 @@
+{
+  "event": "lead",
+  "source": "landing_page",
+  "name": "Akhil Varma",
+  "email": "akhil@example.com",
+  "phone": "+91-9876543210",
+  "product_interest": "AI Risk Monitoring"
+}

@@ -1,0 +1,8 @@
+redis
+fastapi
+uvicorn
+python-multipart
+textblob
+tika
+PyPDF2
+pymupdf

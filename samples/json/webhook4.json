@@ -1,0 +1,8 @@
+{
+  "event": "support_request",
+  "ticket_id": "SUP-1123",
+  "customer_id": "CUST-789",
+  "message": "Dashboard reports are not loading after recent update.",
+  "priority": "medium",
+  "status": "open"
+}

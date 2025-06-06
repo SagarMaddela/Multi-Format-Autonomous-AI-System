@@ -1,0 +1,8 @@
+Subject: Issue Logging Into My Account
+
+Hi Team,
+
+I'm having trouble accessing my dashboard. It keeps showing a 403 error after login. Could you please look into this and help me resolve it?
+
+Thanks,  
+Priya Menon
