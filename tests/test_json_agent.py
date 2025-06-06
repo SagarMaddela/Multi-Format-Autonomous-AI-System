@@ -6,7 +6,7 @@ from json_agent.agent import detect_json_anomaly
 import json
 
 if __name__ == "__main__":
-    with open("samples/json_webhook.json") as f:
+    with open("samples/webhook1.json") as f:
         data = json.load(f)
 
     result = detect_json_anomaly(data)
