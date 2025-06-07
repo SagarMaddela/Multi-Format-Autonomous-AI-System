@@ -2,7 +2,6 @@
 
 A smart, multi-agent system capable of autonomously processing Emails, PDFs, and JSON inputs to classify format and business intent, extract relevant fields, and dynamically trigger follow-up actions—while logging everything in a shared memory for audit and traceability.
 
----
 
 ## 🚀 Features
 
@@ -55,7 +54,6 @@ A smart, multi-agent system capable of autonomously processing Emails, PDFs, and
   * `POST /risk_alert`
   * `POST /invoice/flag`
 
----
 
 ## 📂 Project Structure
 
@@ -181,7 +179,7 @@ docker compose up --build
 # Make a GET request 
 GET/http://localhost:8000/ - Then u will get a response like this 
 
-
+```bash 
 {
     "message": "Classifier API is up and running"
 }
@@ -221,7 +219,7 @@ Go to body --> form-data --> Change the key to file and attach your sample file 
         "logged_at": "2025-06-07T17:47:50.764763"
     }
 }
-
+```
 ---
 
 ## ✅ Bonus Features
