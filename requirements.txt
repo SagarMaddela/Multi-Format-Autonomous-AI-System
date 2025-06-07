@@ -6,5 +6,6 @@ textblob
 tika
 PyPDF2
 pymupdf
-lanchain
+langchain
 ollama
+langchain-community

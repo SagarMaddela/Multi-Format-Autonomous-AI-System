@@ -4,7 +4,7 @@ import re
 import json
 import logging
 from langchain.prompts import PromptTemplate
-from utils.llm_utils import llm  # Import shared LLM
+from utils.llm_utils import get_llm  # Import shared LLM
 from memory.store import SharedMemory
 import requests
 
@@ -49,6 +49,9 @@ def detect_json_anomaly(json_data: dict) -> dict:
         prompt = json_prompt.format(json_data=safe_json)
 
         logger.info("Sending JSON data to LLM for anomaly detection...")
+        llm = get_llm()
+        if not llm:
+            raise ValueError("LLM is not initialized. Please check your configuration.")
         raw_response = llm.invoke(prompt)
         logger.info(f"LLM Response: {raw_response}")
 

@@ -4,7 +4,7 @@ import os
 import re
 import json
 from langchain.prompts import PromptTemplate
-from utils.llm_utils import llm  
+from utils.llm_utils import get_llm 
 import logging
 from memory.store import SharedMemory
 
@@ -47,6 +47,10 @@ def classify_input(text: str) -> dict:
         prompt = prompt_template.format(text=text)
         logger.info("Sending text to LLM for classification...")
 
+        llm = get_llm()
+        if not llm:
+            raise ValueError("LLM is not initialized. Please check your configuration.")
+        
         raw_response = llm.invoke(prompt)
         logger.info(f"LLM response: {raw_response}")
 

@@ -3,10 +3,15 @@
 import redis
 import json
 import uuid
+import os
 from datetime import datetime
 
+# Load Redis config from environment variables
+REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
+REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
+
 # Initialize Redis connection
-r = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, db=0, decode_responses=True)
 
 class SharedMemory:
     def __init__(self):

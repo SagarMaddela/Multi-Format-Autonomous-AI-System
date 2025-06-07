@@ -5,7 +5,7 @@ import os
 import json
 import logging
 from langchain.prompts import PromptTemplate
-from utils.llm_utils import llm
+from utils.llm_utils import get_llm  # Import shared LLM
 from memory.store import SharedMemory
 
 os.makedirs("logs", exist_ok=True)
@@ -95,6 +95,9 @@ def analyze_pdf_flags(pdf_path: str) -> dict:
     prompt = pdf_prompt.format(text=safe_text)
 
     logger.info("Sending PDF text to LLM for flag detection...")
+    llm = get_llm()
+    if not llm:
+        raise ValueError("LLM is not initialized. Please check your configuration.")
     raw_response = llm.invoke(prompt)
     logger.info(f"LLM Response: {raw_response}")
 

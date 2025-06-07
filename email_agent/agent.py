@@ -4,7 +4,7 @@ import re
 import json
 import logging
 from langchain.prompts import PromptTemplate
-from utils.llm_utils import llm  # importing only the LLM
+from utils.llm_utils import get_llm # importing only the LLM
 from memory.store import SharedMemory
 import requests
 
@@ -68,7 +68,9 @@ def analyze_email(email: str) -> dict:
     try:
         prompt = email_prompt.format(email=email[:2000])
         logger.info("Sending prompt to LLM...")
-
+        llm = get_llm()
+        if not llm:
+            raise ValueError("LLM is not initialized. Please check your configuration.")
         raw_response = llm.invoke(prompt)
         logger.info(f"LLM Response: {raw_response}")
 
