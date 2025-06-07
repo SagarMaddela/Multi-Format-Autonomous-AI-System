@@ -135,7 +135,7 @@ multi_agent_system/
 
 | Email Classification            | PDF Invoice Parsing         | JSON Anomaly                  |
 | ------------------------------- | --------------------------- | ----------------------------- |
-| ![email](screenshots/email.png) | ![pdf](screenshots/pdf.png) | ![json](screenshots/json.png) |
+| ![email](screenshots/email_output.png) | ![pdf](screenshots/pdf_output.png) | ![json](screenshots/json_output.png) |
 
 ---
 
@@ -187,7 +187,7 @@ GET/http://localhost:8000/ - Then u will get a response like this
 ```
 
 # Make a POST request 
-POST/http://localhost:8000/classify 
+POST/http://localhost:8000/classify --> 
 Go to body --> form-data --> Change the key to file and attach your sample file (email/pdf/json) as value , then u will get some response like this ( A sample response )
 
 ```bash 
@@ -220,19 +220,11 @@ Go to body --> form-data --> Change the key to file and attach your sample file 
     }
 }
 ```
----
 
-## ✅ Bonus Features
-
-* Retry logic for failed actions
-* Simple web UI to upload inputs and visualize routing
-* End-to-end audit log viewer
-
----
 
 ## 🧠 Agent Flow Diagram
 
-*Diagram showing Classifier Agent → Specialized Agent → Action Router → Memory Log → REST API Calls*
+
 
 ---
 
