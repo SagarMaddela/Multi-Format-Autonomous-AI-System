@@ -139,6 +139,12 @@ multi_agent_system/
 
 ---
 
+## Detailed Working Video 
+
+![video](screenshots/final.mp4)
+
+---
+
 ## 🛠 Tech Stack
 
 * **Python** + **FastAPI** for microservice architecture
